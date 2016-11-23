@@ -1,0 +1,128 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <style type="text/css">
+        .demoOut {
+            width: 600px;
+            height: 600px;
+            margin-top: 200px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .demo {
+            width: 600px;
+            height: 600px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .demo a {
+            background-color: #449243;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .demoOut .btn {
+            position: absolute;
+            height: 40%;
+            width: 40%;
+            top: 30%;
+            left: 30%;
+            background-color: royalblue;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+        }
+        
+        .demoOut .btn span {
+            font-size: 4vh;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+        }
+    </style>
+    <link href="cicular.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="demo01" class="demoOut">
+        <div class="demo">
+            <ul>
+                <li>
+                    <a href="#"><img src="images/01.png" width="50" height="50" />
+                        <p>天地玄黄，宇宙洪荒</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/02.png" width="50" height="50" />
+                        <p>日月盈昃，辰宿列张</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/03.png" width="50" height="50" />
+                        <p>寒来暑往，秋收冬藏</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/01.png" width="50" height="50" />
+                        <p>闰余成岁，律吕调阳</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/02.png" width="50" height="50" />
+                        <p>云腾致雨，露结为霜</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/03.png" width="50" height="50" />
+                        <p>金生丽水，玉出昆冈</p>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="btn open" style="background-color:gray;"><span>默认</span></div>
+    </div>
+
+    <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="circular.min.js"></script>
+    <script>
+$(document).ready(function(e) {
+	
+	var circ =$("#demo01 .demo").circular({
+        centerDeg: 90,//扇形中心线角度，单位：度，默认：90
+        allDeg: 180,//整个扇形角度，单位：度，默认：180
+        inner: 50,//内部圆形百分比，默认：50
+        hidden: false,//开始时是否隐藏，默认：false
+        animation: "zoom",//动画类型，默认：zoom，其他：clockwise：顺时针展开，counterclockwise：逆时针展开，bothside：两侧展开
+        spacing: 3,//间距，单位：度，默认：0
+        time: 0.5//动画时间，单位：秒，默认：0.5
+    });
+
+
+	$("#demo01 .btn").click(function(){
+        if($(this).hasClass("open")){
+
+            circ.toHidden();//隐藏方法
+
+            $(this).removeClass("open");
+            $(this).css("background-color","royalblue");
+        }else{
+
+            circ.toShow();//显示方法
+
+            $(this).addClass("open");
+            $(this).css("background-color","gray");
+        }
+	});
+});
+</script>
+</body>
+
+</html>
