@@ -124,7 +124,9 @@
             $(this).find("ul li a").css("transform", "skew(-" + skew + "deg) rotate(-" + rotate + "deg) scale(1)");
 
             //扇形内边
-            $(this).find("ul li a").css("background", "radial-gradient(transparent " + inner / Math.sqrt(2) + "%," + $(this).find("ul li a").css("background-color") + " " + inner / Math.sqrt(2) + "%)");
+            $(this).find("ul li a").each(function(index,element){
+                $(element).css("background", "radial-gradient(transparent " + inner / Math.sqrt(2) + "%," + $(element).css("background-color") + " " + inner / Math.sqrt(2) + "%)");
+            });
 
             //内边遮盖
             $(this).find("ul").after("<div class=\"after\"></div>");
