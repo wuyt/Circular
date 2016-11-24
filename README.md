@@ -50,6 +50,6 @@ var circ =$(".demo").circular();
 5、方法
 
 * `toHidden`    隐藏方法  
-* `circtoShow`  显示方法  
+* `toShow`  显示方法  
 
 http://blog.csdn.net/wuyt2008/article/details/53302880#t1
