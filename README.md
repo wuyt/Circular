@@ -37,7 +37,7 @@ jquery 扇形显示插件
 var circ =$(".demo").circular(); 
 ```
 
-4、参数方法
+4、参数
 
 * `centerDeg`   扇形中心线角度，单位：度，默认：90
 * `allDeg`  整个扇形角度，单位：度，默认：180
@@ -47,6 +47,7 @@ var circ =$(".demo").circular();
 * `spacing` 间距，单位：度，默认：0
 * `time`    动画时间，单位：秒，默认：0.5
 
+5、方法
 
 * `toHidden`    隐藏方法  
 * `circtoShow`  显示方法  
