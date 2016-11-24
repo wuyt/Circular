@@ -33,4 +33,4 @@ time: 0.5//动画时间，单位：秒，默认：0.5
 circ.toHidden();//隐藏方法  
 circtoShow();//显示方  
 
-http://blog.csdn.net/wuyt2008/article/details/53302880
+http://blog.csdn.net/wuyt2008/article/details/53302880#t1
